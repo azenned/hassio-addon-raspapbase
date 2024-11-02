@@ -66,9 +66,9 @@ LABEL \
     org.opencontainers.image.vendor="Home Assistant Community Add-ons" \
     org.opencontainers.image.authors="ZENNED <azenned@gmail.com>" \
     org.opencontainers.image.licenses="MIT" \
-    org.opencontainers.image.url="https://github.com/azenned/hassio-addons-directory/" \
-    org.opencontainers.image.source="https://github.com/azenned/hassio-addons-directory/tree/master/raspap" \
-    org.opencontainers.image.documentation="https://github.com/azenned/hassio-addons-directory/blob/main/README.md" \
+    org.opencontainers.image.url="https://github.com/azenned/hassio-addon-raspapbase/" \
+    org.opencontainers.image.source="https://giazenned/hassio-addon-raspapbase/tree/master/" \
+    org.opencontainers.image.documentation="https://github.com/azenned/hassio-addon-raspapbase/blob/main/README.md" \
     org.opencontainers.image.created=${BUILD_DATE} \
     org.opencontainers.image.revision=${BUILD_REF} \
     org.opencontainers.image.version=${BUILD_VERSION}
