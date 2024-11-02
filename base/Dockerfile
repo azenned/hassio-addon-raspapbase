@@ -55,20 +55,23 @@ VOLUME [ "/sys/fs/cgroup" ]
 
 # Labels
 LABEL \
-    io.hass.name="${BUILD_NAME}" \
-    io.hass.description="${BUILD_DESCRIPTION}" \
+    io.hass.name="Addon RASPAP base for ${BUILD_ARCH}" \
+    io.hass.description="Home Assistant Community Add-on: ${BUILD_ARCH} RASPAP base image" \
     io.hass.arch="${BUILD_ARCH}" \
-    io.hass.type="addon" \
+    io.hass.type="base" \
     io.hass.version=${BUILD_VERSION} \
+    io.hass.base.version=${BUILD_VERSION} \
+    io.hass.base.name="raspap" \
+    io.hass.base.image="hassioaddons/raspap-base" \
     maintainer="ZENNED <azenned@gmail.com>" \
-    org.opencontainers.image.title="${BUILD_NAME}" \
-    org.opencontainers.image.description="${BUILD_DESCRIPTION}" \
+    org.opencontainers.image.title="Addon RASPAP base for ${BUILD_ARCH}" \
+    org.opencontainers.image.description="Home Assistant Community Add-on: ${BUILD_ARCH} RASPAP base image" \
     org.opencontainers.image.vendor="Home Assistant Community Add-ons" \
     org.opencontainers.image.authors="ZENNED <azenned@gmail.com>" \
     org.opencontainers.image.licenses="MIT" \
-    org.opencontainers.image.url="https://github.com/azenned/hassio-addon-raspapbase/" \
-    org.opencontainers.image.source="https://giazenned/hassio-addon-raspapbase/tree/master/" \
-    org.opencontainers.image.documentation="https://github.com/azenned/hassio-addon-raspapbase/blob/main/README.md" \
+    org.opencontainers.image.url="https://addons.community" \
+    org.opencontainers.image.source="https://github.com/${BUILD_REPOSITORY}" \
+    org.opencontainers.image.documentation="https://github.com/${BUILD_REPOSITORY}/blob/main/README.md" \
     org.opencontainers.image.created=${BUILD_DATE} \
     org.opencontainers.image.revision=${BUILD_REF} \
     org.opencontainers.image.version=${BUILD_VERSION}
