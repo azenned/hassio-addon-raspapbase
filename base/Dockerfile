@@ -13,7 +13,14 @@ ENV LC_ALL C
 ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update \
-    && apt-get install -y systemd systemd-sysv sudo wget procps curl systemd iproute2 \
+    && apt-get install -y --no-install-recommends \
+    bash=5.2.15-2+b7 \
+    systemd=252.30-1~deb12u2 \
+    systemd-sysv=252.30-1~deb12u2 \
+    sudo=1.9.13p3-1+deb12u1 \
+    wget=1.21.3-1+b1 \
+    procps=2:4.0.2-3 \
+    iproute2=6.1.0-3 \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
     && rm -fr \
