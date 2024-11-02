@@ -28,12 +28,8 @@ RUN apt-get update \
         /var/cache/* \
         /var/lib/apt/lists/* \
         /var/log/*.log \
-        /var/log/apt
-
-RUN cd /lib/systemd/system/sysinit.target.wants/ \
-    && rm $(ls | grep -v systemd-tmpfiles-setup)
-
-RUN rm -f /lib/systemd/system/multi-user.target.wants/* \
+        /var/log/apt  \
+    && rm -f /lib/systemd/system/multi-user.target.wants/* \
     /etc/systemd/system/*.wants/* \
     /lib/systemd/system/local-fs.target.wants/* \
     /lib/systemd/system/sockets.target.wants/*udev* \
@@ -41,10 +37,8 @@ RUN rm -f /lib/systemd/system/multi-user.target.wants/* \
     /lib/systemd/system/basic.target.wants/* \
     /lib/systemd/system/anaconda.target.wants/* \
     /lib/systemd/system/plymouth* \
-    /lib/systemd/system/systemd-update-utmp*
-
-
-RUN curl -sL https://install.raspap.com | bash -s -- --yes --wireguard 1 --openvpn 1 --adblock 1 --rest 1
+    /lib/systemd/system/systemd-update-utmp* \
+    && curl -sL https://install.raspap.com | bash -s -- --yes --wireguard 1 --openvpn 1 --adblock 1 --rest 1
 
 # Copy root filesystem
 COPY rootfs /
