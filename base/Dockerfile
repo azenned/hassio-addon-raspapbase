@@ -19,6 +19,7 @@ RUN apt-get update \
     systemd-sysv=252.30-1~deb12u2 \
     sudo=1.9.13p3-1+deb12u1 \
     wget=1.21.3-1+b1 \
+    nginx=1.22.1-9 \
     procps=2:4.0.2-3 \
     iproute2=6.1.0-3 \
     && apt-get clean \
