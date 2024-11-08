@@ -14,7 +14,6 @@ ENV DEBIAN_FRONTEND noninteractive
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
-    bash=5.2.15-2+b7 \
     systemd=252.30-1~deb12u2 \
     systemd-sysv=252.30-1~deb12u2 \
     sudo=1.9.13p3-1+deb12u1 \
